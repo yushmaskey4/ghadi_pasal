@@ -2,6 +2,8 @@ import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Navbar from "./components/Navbar"; 
 import Home from "./pages/Home";
+import Shop from "./pages/Shop";
+import Footer from "./components/Footer";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -26,8 +28,9 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home addToCart={addToCart} />} />
-          <Route path="/shop" element={<div className="p-20 text-center">Shop Page Coming Soon...</div>} />
+          <Route path="/shop" element={<Shop addToCart={addToCart} />} />
         </Routes>
+        <Footer /> 
       </div>
     </Router>
   );
