@@ -4,7 +4,7 @@ const HeroSection = () => (
   <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
     <div className="absolute inset-0 z-0">
       
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/60 to-black z-10" />
+      <div className="absolute inset-0 bg-linear-to-b from-black/20 via-black/60 to-black z-10" />
       <img
         src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1780"
         alt="Watch Hero"
@@ -41,7 +41,7 @@ const Home = ({ addToCart }) => {
           {/* .slice(0, 4) le garera first 4 ota matra display hunchha */}
           {WATCHES.slice(0, 4).map((watch) => (
             <div key={watch.id} className="group cursor-pointer">
-              <div className="relative overflow-hidden aspect-[3/4] bg-gray-900 rounded-2xl mb-4">
+              <div className="relative overflow-hidden aspect-3/4 bg-gray-900 rounded-2xl mb-4">
                 <img
                   src={watch.image}
                   alt={watch.name}

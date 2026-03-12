@@ -25,6 +25,8 @@ function App() {
           <div className="md:hidden fixed inset-x-0 bg-black border-b border-gray-900 p-8 flex flex-col space-y-6 text-center z-40">
             <Link to="/" onClick={() => setIsMenuOpen(false)} className="text-xl">Home</Link>
             <Link to="/shop" onClick={() => setIsMenuOpen(false)} className="text-xl">Shop</Link>
+            <Link to="/about" onClick={() => setIsMenuOpen(false)} className="text-xl">About</Link>
+            <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="text-xl">Contact</Link>
           </div>
         )}
 
