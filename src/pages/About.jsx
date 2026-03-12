@@ -1,6 +1,7 @@
 const About = () => {
   return (
     <div className="pt-32 pb-20 px-6 max-w-5xl mx-auto min-h-screen text-center">
+        
       <h1 className="text-5xl font-black uppercase tracking-tighter mb-8">
         Our <span className="text-yellow-500">Legacy</span>
       </h1>
@@ -20,7 +21,7 @@ const About = () => {
         </div>
         <div className="relative">
           <img 
-            src="https://images.unsplash.com/photo-1509048191080-d2984bad6ad5?q=80&w=1964" 
+            src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1780" 
             alt="Craftsmanship" 
             className="rounded-2xl opacity-80 grayscale hover:grayscale-0 transition duration-700"
           />

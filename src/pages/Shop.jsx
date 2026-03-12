@@ -46,7 +46,7 @@ const Shop = ({ addToCart }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {filteredWatches.map((watch) => (
             <div key={watch.id} className="group">
-              <div className="relative overflow-hidden aspect-[3/4] bg-gray-900 rounded-2xl mb-4">
+              <div className="relative overflow-hidden aspect-3/4 bg-gray-900 rounded-2xl mb-4">
                 <img 
                   src={watch.image} 
                   alt={watch.name} 
