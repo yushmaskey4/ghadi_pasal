@@ -28,6 +28,7 @@ const Footer = () => {
             <li><Link to="/" className="hover:text-yellow-500 transition">Home</Link></li>
             <li><Link to="/shop" className="hover:text-yellow-500 transition">Shop</Link></li>
             <li><Link to="/about" className="hover:text-yellow-500 transition">About Us</Link></li>
+            <li><Link to="/contact" className="hover:text-yellow-500 transition">Contact</Link></li>
           </ul>
         </div>
 
@@ -46,11 +47,11 @@ const Footer = () => {
           <h4 className="text-white font-bold uppercase text-xs tracking-widest mb-6">Contact</h4>
           <div className="flex items-center gap-3">
             <MapPin size={16} className="text-yellow-500" />
-            <span>Koshi Haraicha, Nepal</span>
+            <span>Itahari, Nepal</span>
           </div>
           <div className="flex items-center gap-3">
             <Phone size={16} className="text-yellow-500" />
-            <span>+977 98XXXXXXXX</span>
+            <span>+977 9812345678</span>
           </div>
           <div className="flex items-center gap-3">
             <Mail size={16} className="text-yellow-500" />
@@ -62,7 +63,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="max-w-7xl mx-auto pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-gray-600 uppercase tracking-[0.2em]">
         <p>© {currentYear} TIME FUSION. ALL RIGHTS RESERVED.</p>
-        <p>DESIGNED BY YUSH MASKEY</p>
+        <p>DESIGNED BY  BALEN SAMPANG OLI</p>
       </div>
     </footer>
   );

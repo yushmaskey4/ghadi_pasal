@@ -13,6 +13,8 @@ const Navbar = ({ cartCount, isMenuOpen, setIsMenuOpen }) => {
       <div className="hidden md:flex space-x-8 text-sm font-medium tracking-widest uppercase">
         <NavLink to="/" className={({isActive}) => isActive ? "text-yellow-500" : "hover:text-yellow-500 transition"}>Home</NavLink>
         <NavLink to="/shop" className={({isActive}) => isActive ? "text-yellow-500" : "hover:text-yellow-500 transition"}>Shop</NavLink>
+        <NavLink to="/about" className={({isActive}) => isActive ? "text-yellow-500" : "hover:text-yellow-500 transition"}>About</NavLink>
+        <NavLink to="/contact" className={({isActive}) => isActive ? "text-yellow-500" : "hover:text-yellow-500 transition"}>Contact</NavLink>
       </div>
       <div className="flex items-center gap-6">
         <div className="relative cursor-pointer hover:text-yellow-500 transition">

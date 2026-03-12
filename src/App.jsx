@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import Footer from "./components/Footer";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -29,6 +31,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home addToCart={addToCart} />} />
           <Route path="/shop" element={<Shop addToCart={addToCart} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer /> 
       </div>
