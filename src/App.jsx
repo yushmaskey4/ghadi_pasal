@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
+// 1. Simple Data
+const WATCHES = [
+  { id: 1, name: "Luxury Rolex", price: 5000 },
+  { id: 2, name: "Omega Seamaster", price: 3500 },
+];
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [cart, setCart] = useState([]);
+
+  // 2. Logic: Add to Cart
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+    alert(`${product.name} added!`);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+      <nav style={{ padding: '20px', borderBottom: '1px solid #ccc' }}>
+        <Link to="/">Home</Link> | <Link to="/products">Shop</Link> | 🛒 {cart.length}
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<h1>Welcome to Time Fusion</h1>} />
+        <Route path="/products" element={
+          <div>
+            <h2>Our Watches</h2>
+            {WATCHES.map(w => (
+              <div key={w.id}>
+                <p>{w.name} - ${w.price}</p>
+                <button onClick={() => addToCart(w)}>Add to Cart</button>
+              </div>
+            ))}
+          </div>
+        } />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
